@@ -17,6 +17,7 @@ Eine überarbeitete Version des Feldzugs Reduktion ist jetzt im Spiel verfügbar
 [*][b]Granatwerfer:[/b] Schüsse, die weit unter den Soldaten zielen, werden jetzt anders gebogen, damit sie nicht die Kante der Plattform treffen, auf der der Soldat steht.
 [*]Zielgestützte Waffen zielen nicht mehr auf Scanner.
 [*]Soldaten können jetzt sicher durch alle Kugeln rollen, auch durch die von Nicht-Soldaten abgefeuerten.
+[*]Ein [b]cl_loadout_random[/b] Konsolenbefehl wurde hinzugefügt. Er wählt nach dem Zufallsprinzip Primär-, Sekundär- und Extras für dich und deine Bots aus.
 [/list]
 
 [h2]Menüs[/h2]
@@ -41,13 +42,20 @@ Eine überarbeitete Version des Feldzugs Reduktion ist jetzt im Spiel verfügbar
 [*]Es wurde eine Option zu asw_jukebox hinzugefügt, die dafür sorgt, dass die vom Spieler bereitgestellte Kampfmusik nicht unterbrochen wird, um Multi-Part Kampfmusik zu verwenden.
 [*]Skillpunkte können jetzt über Convars neu zugewiesen werden (z.B. asw_marine_skill_sarge_0).
 [*]rd_chainsaw_idle_sound wurde für Herausforderungen hinzugefügt, bei denen der Kettensägenleerlaufsound deaktiviert werden soll.
-<<<<<<< HEAD
 [*]Bestimmte, vom Author platzierte Wächterwanzen und Hüterwanzen haben den Eintrag in der Swarmopedia nicht freigeschaltet, wenn sie getötet wurden.
 [*]Ein Absturz bei der Pfadfindung, der durch eine falsche Initialisierung von info_node_link verursacht wurde, wurde behoben.
-=======
-		[*]Fixed certain mapper-placed Antlion Guards and Antlion Guardians not unlocking the Swarmopedia entry when killed.
-		[*]Fixed a pathfinding crash caused by incorrect initialization of info_node_link.
->>>>>>> parent of da7def32 (add patch notes)
+[*]Ein CollideWithMarines-Schlüsselwert wurde zu func_asw_fade hinzugefügt. Der Hauptzweck ist es, alle Out-of-Bounds-Exploits für Speedruns zu erhalten.
+[*]Es wurden 3 neue Material-Proxys hinzugefügt - LocalTime_Month, LocalTime_Day, LocalTime_Hour. Sie können verwendet werden, um den Rahmen einer animierten Textur auf der Grundlage der lokalen Systemzeit des Betrachters zu ändern. Die Werte für den Monat reichen von 0 bis 11, für die Tage von 0 bis 30 und für die Stunden von 0 bis 23. Zum Beispiel:
+[code]UnlitGeneric {
+    $basetexture "example/animated_monthly_texture"
+    $frame 0
+
+    Proxies {
+        LocalTime_Month {
+            resultvar "$frame"
+        }
+    }
+}[/code]
 [/list]
 
 [h2]Controller[/h2]
