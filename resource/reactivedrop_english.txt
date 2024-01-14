@@ -312,6 +312,10 @@
 "rd_objective_chat_message"	"Objective %s1 complete! \nTime: %s2 Delta with previous objective: %s3\n"
 "rd_points_awarding_message"	"Awarding %s4%s1 points to %s4%s2, total = %s4%s3\n"
 "rd_points_reduced_due_to_farming"	"You recently played this map. Gained points will be decreased.\n"
+// %s1 is a player name; %s2, %s3, and %s4 are numbers.
+"rd_hoiaf_new_personal_best_score_on_this_mission"	"%s1 has improved their seasonal personal best score on this mission from %s2 to %s3, increasing their bonus points this season by +%s4!\n"
+// %s1 is a player name; %s2 and %s3 are numbers.
+"rd_hoiaf_bounty_mission_bonus_claimed"	"By completing this mission, %s1 has claimed a bounty of %s2 points! %s1 has claimed %s3 points from mission bounties so far this season.\n"
 
 "asw_mission_complete_CAMPAIGN"	"CAMPAIGN"
 "asw_mission_complete_MISSION"	"MISSION"
@@ -2136,6 +2140,8 @@
 "ASW_Custom_Music_Col_Artist"	"Artist"
 "ASW_Custom_Music_Col_Album"	"Album"
 "nb_onslaught_title"	"Onslaught"
+// context: Hardcore Brutal Onslaught
+"nb_hardcore_title"	"Hardcore"
 "nb_friendly_fire_title"	"Friendly Fire"
 "asw_difficulty_imba"	"Brutal"
 "asw_hardcore_ff"	"Hardcore Friendly Fire"
@@ -2834,7 +2840,7 @@
 // the remark about "half the brilliant scientist" echoes what Shaun said about himself in the parasite entry.
 // Helvetica was about to say "nobody has to deal with your shit" before changing her mind.
 // "locking the fire exits" is a reference to the Triangle Shirtwaist Factory Fire (https://en.wikipedia.org/wiki/Triangle_Shirtwaist_Factory_fire), a disaster where over a hundred workers perished because management locked the exits.
-"rd_so_paragraph_biomass_3"	"For every self-proclaimed genius just takes what he wants without thinking about the world he claims to want to save, there's people like me who have to clean up afterwards. Someone has to go back over the earth you salted and see if there's anything worth salvaging. I've read your notes, Shaun. I know what your coworkers and bosses had to say about you. My team braved the hellscape you created for this information, the least I can do is make sure nobody has to deal with your... let's say \"unique approach to problem solving\". I do my research. I think about what I'm going to do before I do it. Information isn't free, Shaun. Good information, reliable information, comes at a steep cost. Sometimes that price is paid in blood. And if you have that, if you have something people died to bring you, the absolute least you can do is make sure that price never has to be paid again. If you really were half the \"brilliant scientist\" you claim to be, you'd have thought about a single living soul other than yourself instead of locking the fire exits."
+"rd_so_paragraph_biomass_3"	"For every self-proclaimed genius that just takes what he wants without thinking about the world he claims to want to save, there's people like me who have to clean up afterwards. Someone has to go back over the earth you salted and see if there's anything worth salvaging. I've read your notes, Shaun. I know what your coworkers and bosses had to say about you. My team braved the hellscape you created for this information, the least I can do is make sure nobody has to deal with your... let's say \"unique approach to problem solving\". I do my research. I think about what I'm going to do before I do it. Information isn't free, Shaun. Good information, reliable information, comes at a steep cost. Sometimes that price is paid in blood. And if you have that, if you have something people died to bring you, the absolute least you can do is make sure that price never has to be paid again. If you really were half the \"brilliant scientist\" you claim to be, you'd have thought about a single living soul other than yourself instead of locking the fire exits."
 // "Bases" here means "things that are alkaline; the opposite of acids". Sodium bicarbonate is also called "baking soda", often used both for cooking and to neutralize acid spills.
 "rd_so_paragraph_biomass_4"	"Fire. The only way to deal with biomass is fire. It's infested the vents and occupied the doorways. There's no other way out. Electricity doesn't work. Acids don't work. Bases don't work. I thought the sodium bicarbonate would help neutralize the corrosive skin, but I think it just made the biomass angry. Sorry, anthropomorphizing again. I suppose I'm going to find out when I burn it. It's okay. I'm the genius that got us into this situation, I can get me out of it. I think I know where I can get a blowtorch. Just a little heat, delicately applied, should cut a swath right through the middle. I don't know why I didn't think of it sooner."
 "rd_so_paragraph_grub_0"	"12/31/52, 03:24\nAlright. Things happened. I couldn't find a blowtorch, so I made do with a can of pressurized lubricant and Helen's secret lighter. Not that it's really a secret if you lock it in a drawer every time someone walks in. And, well, it worked on the biomass. Turns out there's a reason they don't let you bring open flame into the complex. The entire hallway just went up instantly. Lubricant touched flame and the fireball did not stop where it should have. The biomass is gone, but so are most of my hair and clothes. Turns out I was right about the oxygen mix. Once again my own brilliance curses me with foresight, but not the ability to prevent the inevitable. I'm a tragic genius, tortured by a world that refuses to understand me."
@@ -4835,12 +4841,6 @@
 "rd_event_timer_days"	"%s1 (%s2 days remain)"
 "rd_event_timer_hours"	"%s1 (%s2 hours remain)"
 "rd_event_timer_soon"	"%s1 (ends in less than an hour!)"
-"rd_event_mapping_competition"	"Mapping Competition 2023 \"Boss Fight\""
-"rd_event_double_xp_anniversary"	"Anniversary Double Experience Week"
-"rd_event_news_anniversary_6th"	"6th Anniversary! New campaign, side stories, and more!"
-"rd_event_news_anniversary_7th"	"7th Anniversary! New UI redesign!"
-"rd_event_news_ranked_missions_added"	"New and old favorite missions added to HoIAF!"
-"rd_event_news_ranked_missions_endless"	"HoIAF adds Endless Missions!"
 
 "rd_ticker_title"	"IAF News"
 // these are imaginary stock market updates on the main menu. %s1 is the company name, %s2 is the symbol (like SYN for SynTek; symbols are not translated), %s3 is a number like 1.23 for how much the stock price changed, and %s4 is a number like 1234.56 for the final stock price.
@@ -5171,7 +5171,9 @@
 "asw_infection_lastStand_used"	"%s1 activated Last Stand mode."
 "asw_infection_lastStand_timeAdd"	"+60 seconds to the match timer."
 "asw_infection_win_human"	"Humans win!"
+"asw_infection_win_human_hud"	"Humans win"
 "asw_infection_win_zombie"	"Zombies win!"
+"asw_infection_win_zombie_hud"	"Zombies win"
 "asw_infection_survivors"	"Survivors: %s1."
 "asw_infection_starts_in"	"First zombie appears in: %s1"
 // %s1 is a meter made up of █ and spaces; %s2 is a percentage.
@@ -5284,5 +5286,34 @@
 "rd_lobby_tooltip_ping_medium_desc"	"Your connection to this lobby is likely to have a moderate round trip time, resulting in an acceptable experience."
 "rd_lobby_tooltip_ping_high_desc"	"Your connection to this lobby is likely to have a very high round trip time, resulting in a poor experience."
 "rd_lobby_tooltip_ping_lan_desc"	"This lobby is hosted on your local area network."
+
+"rd_notification_dismiss_title"	"Dismiss Notification"
+"rd_notification_dismiss_desc"	"Permanently remove this notification from your list."
+"rd_notification_age_days"	"%s1d"
+"rd_notification_age_hours"	"%s1h"
+"rd_notification_age_minutes"	"%s1m"
+"rd_notification_age_seconds"	"%s1s"
+"rd_notification_expires_in_days"	"Expires in %s1 days."
+"rd_notification_expires_in_hours"	"Expires in %s1 hours."
+"rd_notification_expires_in_minutes"	"Expires in %s1 minutes."
+"rd_notification_expires_in_seconds"	"Expiring now!"
+"rd_notification_none"	"You have no notifications!"
+
+"rd_notification_filter_title"	"Notification Filters"
+"rd_notification_filter_desc"	"Deselect notification types to hide them from your notification list."
+"rd_notification_filter_crafting_title"	"Crafting"
+"rd_notification_filter_crafting_desc"	"Notifications about crafting and materials."
+"rd_notification_filter_hoiaf_title"	"HoIAF"
+"rd_notification_filter_hoiaf_desc"	"Notifications about Heroes of the Interstellar Armed Forces."
+// both bug reports and abuse reports are included in this filter, but notifications about actions taken against the current player are not filterable.
+"rd_notification_filter_reports_title"	"Reports"
+"rd_notification_filter_reports_desc"	"Non-critical notifications about reports."
+
+"rd_hoiaf_bounty_title"	"Mission Bounties Available"
+"rd_hoiaf_bounty_desc"	"Complete each of these missions on a participating Heroes of the Interstellar Armed Forces server within the time limit to receive bonus points."
+"rd_hoiaf_bounty_fully_claimed"	"All bonuses claimed!"
+
+"rd_player_found_crafting_material"	"%s1 has found %s2."
+"rd_player_found_crafting_materials"	"%s1 has found %s3× %s2."
 }
 }
